@@ -48,6 +48,33 @@ First let's load <code>js</code> from the js github repository (It might take a 
  })  
 </div>
 
+<h2>  Memoization </h2>
+
+<p>
+  <code>memoize</code> returns a memoized version of a <code>1-arity</code> function.
+</p>
+<div class="js">
+heavy_calculation = function(x){
+  return Math.sqrt(Math.sin(x) + Math.cos(x))
+};
+
+memo = JST.memoize(heavy_calculation);
+
+[
+  JST.time(function() {
+    heavy_calculation(1232);
+  }),
+  JST.time(function() {
+    memo(1232);
+  }),
+  JST.time(function() {
+    memo(1232);
+  })] 
+</div>
+
+As you can see, the first call to <code>memo</code> takes about the same time as the direct call to <code>heavy_calculation</code>.
+But subsequent calls are very fast.
+
 
 <script>
     window.klipse_settings = {
