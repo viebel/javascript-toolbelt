@@ -1,5 +1,5 @@
 # javascript-toolbelt
 Javascript bunch of functions that I found useful
 
-# Documentation
-https://cdn.rawgit.com/viebel/javascript-toolbelt/master/doc/core.html
+# Interactive Documentation
+https://viebel.github.io/javascript-toolbelt/doc/core.html
