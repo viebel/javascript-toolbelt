@@ -2,4 +2,4 @@
 Javascript bunch of functions that I found useful
 
 # Interactive Documentation
-https://viebel.github.io/javascript-toolbelt/doc/core.html
+https://viebel.github.io/javascript-toolbelt/core.html
