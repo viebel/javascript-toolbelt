@@ -51,35 +51,46 @@ First let's load <code>JST</code> from the <a href="https://github.com/viebel/ja
  })  
 </code></pre>
 
+
+<h2> Permutations </h2>
+
+<p></p>There is a handy function that returns the permutations of an array.</p>
+
+<pre><code class="js">
+JST.permutations([1,2,3])
+</code></pre>
+<p>
+And it is quite fast. You can judge by yourself:
+</p>
+<pre><code class="js">
+JST.time(function() { return JST.permutations([1,2,3,4]);})
+</code></pre>
+<br/>
+
 <h2>  Memoization </h2>
 
 <p>
   <code>memoize</code> returns a memoized version of a <code>1-arity</code> function.
 </p>
 <pre><code class="js">
-heavy_calculation = function(x){
-  return Math.sqrt(Math.sin(x) + Math.cos(x) + Math.tan(x));
-};
-
-memo = JST.memoize(heavy_calculation);
+memo = JST.memoize(JST.permutations);
 
 [
-  JST.time(function() {
-    heavy_calculation(1232);
-  }),
-  JST.time(function() {
-    memo(1232);
-  }),
-  JST.time(function() {
-    memo(1232);
-  })]
+    JST.time(function() {
+        JST.permutations([1,2,3,4,5]);
+    }),
+    JST.time(function() {
+        memo([1,2,3,4,5]);
+    }),
+    JST.time(function() {
+        memo([1,2,3,4,5]);
+    })
+]
 </code></pre>
 <br/>
-As you can see, the first call to <code>memo</code> takes about the same time as the direct call to <code>heavy_calculation</code>.
+As you can see, the first call to <code>memo</code> takes about the same time as the direct call to <code>JST.permutations</code>.
 But subsequent calls are very fast.
 
-
-<br/>
 <br/>
 <br/>
 <br/>
