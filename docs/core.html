@@ -100,14 +100,12 @@ But subsequent calls are very fast.
 <p>Thanks <a href="http://stackoverflow.com/a/32234086/813665">StackOverflow</a>!</p>
 
 <pre><code class="js">
-  JST.maxBy['albatross', 'dog', 'horse']
-</code></pre>
+JST.maxBy(function(s) { return s.length;}, ['albatross', 'dog', 'horse'])</code></pre>
 <br/>
 <p></pr><code>minBy</code> returns the element of the array that leads to the greatest value.</p>
 
 <pre><code class="js">
-  JST.mixBy['albatross', 'dog', 'horse']
-</code></pre>
+JST.minBy(function(s) { return s.length;}, ['albatross', 'dog', 'horse'])</code></pre>
 <br/>
 
 <br/>
