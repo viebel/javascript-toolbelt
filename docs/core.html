@@ -41,17 +41,6 @@ First let's load <code>JST</code> from the <a href="https://github.com/viebel/ja
 </code></pre>
   
   
-<h2>  Benchmark</h2>
-
-<p>
-  <code>benchmark</code> returns a string with the number of msec to run a function <code>n</code> times.
-</p>
-<pre><code class="js">
- JST.benchmark(100, function(){
-    Math.sqrt(1232);
- })  
-</code></pre>
-
 <h2>  Elapsed Time</h2>
 
 <p>
@@ -59,6 +48,17 @@ First let's load <code>JST</code> from the <a href="https://github.com/viebel/ja
 </p>
 <pre><code class="js">
  JST.time(function(){
+    Math.sqrt(1232);
+ })  
+</code></pre>
+  
+ <h2>  Benchmark</h2>
+
+<p>
+  <code>benchmark</code> returns a string with the number of msec to run a function <code>n</code> times.
+</p>
+<pre><code class="js">
+ JST.benchmark(100, function(){
     Math.sqrt(1232);
  })  
 </code></pre>
